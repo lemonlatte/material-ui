@@ -11,6 +11,7 @@ import NestedList from './NestedList';
 
 function getStyles(props, context, state) {
   const {
+    backgroundColor,
     insetChildren,
     leftAvatar,
     leftCheckbox,
@@ -38,7 +39,7 @@ function getStyles(props, context, state) {
     root: {
       backgroundColor: (state.isKeyboardFocused || state.hovered) &&
       !state.rightIconButtonHovered &&
-      !state.rightIconButtonKeyboardFocused ? hoverColor : null,
+      !state.rightIconButtonKeyboardFocused ? hoverColor : backgroundColor ? backgroundColor : null,
       color: textColor,
       display: 'block',
       fontSize: 16,
