@@ -72,6 +72,7 @@ class RadioButton extends Component {
      * Override the inline-styles of the icon element.
      */
     iconStyle: PropTypes.object,
+    iconWrapperStyle: PropTypes.object,
     /**
      * Override the inline-styles of the input element.
      */
@@ -147,6 +148,7 @@ class RadioButton extends Component {
       checkedIcon,
       checked,
       iconStyle,
+      iconWrapperStyle,
       labelStyle,
       labelPosition,
       onCheck, // eslint-disable-line no-unused-vars
@@ -183,7 +185,7 @@ class RadioButton extends Component {
       }) :
       <RadioButtonOn style={checkedStyles} />;
 
-    const mergedIconStyle = Object.assign(styles.icon, iconStyle);
+    const mergedIconStyle = Object.assign(styles.icon, iconWrapperStyle);
     const mergedLabelStyle = Object.assign(styles.label, labelStyle);
 
     return (
